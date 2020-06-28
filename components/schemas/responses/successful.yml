@@ -1,0 +1,88 @@
+#RESPONSE SCHEME
+  # Este esquema Contiene la estructura de una respuesta
+    # SUCCESSFUL RESPONSE -> Contiene la estructura de una respuesta de exito
+    SuccessfulResponse:
+      type: object
+      required:
+        - error
+        - code
+      properties:
+        data: 
+          type: object
+        code: 
+          type: integer
+
+    # CreatedResponse para School: Esquema de la respuesta de exito CreatedResponse el cual contiene un ejemplo
+    CreatedSchoolResponse:
+      type: object
+      required:
+        - data
+        - code
+      properties:
+        data:           
+          $ref: ../models/models.yml#/School
+        code: 
+          type: integer   
+          example: 201  
+          
+    ShowSchoolResponse:
+      type: object
+      required:
+        - data
+        - code
+      properties: 
+        data:
+          $ref: ../models/models.yml#/School
+        code:
+          type: integer
+          example: 200
+
+    ShowSchoolsResponse:
+      type: object
+      required:
+        - data
+        - code
+      properties: 
+        data:
+          $ref: ../models/models.yml#/School
+        code:
+          type: integer
+          example: 200
+
+      # CreatedResponse para Faculty: Esquema de la respuesta de exito CreatedResponse el cual contiene un ejemplo
+    CreatedFacultyResponse:
+      type: object
+      required:
+        - data
+        - code
+      properties:
+        data:           
+          $ref: ../models/models.yml#/Faculty
+        code: 
+          type: integer   
+          example: 201  
+          
+    ShowFacultyResponse:
+      type: object
+      required:
+        - data
+        - code
+      properties: 
+        data:
+          $ref: ../models/models.yml#/Faculty
+        code:
+          type: integer
+          example: 200
+
+    ShowFacultiesResponse:
+      type: object
+      required:
+        - data
+        - code
+      properties: 
+        data:
+          $ref: ../models/models.yml#/Faculty
+        code:
+          type: integer
+          example: 200
+

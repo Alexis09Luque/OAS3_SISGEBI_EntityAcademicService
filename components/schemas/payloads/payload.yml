@@ -1,0 +1,22 @@
+#PAYLOAD SCHEME
+  #Este esquema contiene la estructura de un request body School
+    SchoolPayload:
+      type: object
+      properties:        
+        name:
+          type: string          
+        faculty_id: 
+          type: integer                                 
+      example:           
+          name: "Ingeniería de Sistemas"
+          faculty_id: 2
+  #Este esquema contiene la estructura de un request body Faculty
+    FacultyPayload:
+      type: object
+      properties:        
+        name:
+          type: string                                           
+      example:           
+          name: "Fcaultad de Ingeniería de Sistemas e Informática"
+          
+          
